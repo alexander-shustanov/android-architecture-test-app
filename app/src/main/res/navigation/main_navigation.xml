@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" app:startDestination="@id/bookListFragment">
+
+    <fragment android:id="@+id/bookListFragment"
+              android:name="com.example.alexander.library.ui.list.BookListFragment"
+              android:label="book_list_fragment"
+              tools:layout="@layout/book_list_fragment">
+        <action android:id="@+id/action_bookListFragment_to_bookInfoFragment" app:destination="@id/bookInfoFragment"
+                app:exitAnim="@anim/nav_default_exit_anim" app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+
+    <fragment android:id="@+id/bookInfoFragment"
+              android:name="com.example.alexander.library.ui.info.BookDetailsFragment"
+              android:label="book_info_fragment"
+              tools:layout="@layout/book_details_fragment">
+        <argument android:name="book" app:argType="string"/>
+    </fragment>
+
+</navigation>
